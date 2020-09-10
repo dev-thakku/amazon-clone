@@ -19,7 +19,7 @@ function Header() {
   console.table(basket);
 
   return (
-    <nav className="header">
+    <nav id="top" className="header">
       <Link to="/">
         <img className="header__logo" src={logo} alt="logo" />
       </Link>

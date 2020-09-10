@@ -4,6 +4,7 @@ import "./Checkout.css";
 import CheckoutProuduct from "./CheckoutProuduct";
 import Subtotal from "./Subtotal";
 import ad from "./images/banner-ad.png";
+import FlipMove from "react-flip-move";
 
 function Checkout() {
   const [{ basket }] = useStateValue();
@@ -22,15 +23,21 @@ function Checkout() {
         ) : (
           <div>
             <h2 className="checkout__title">Your Shopping Basket</h2>
-            {basket?.map((item) => (
-              <CheckoutProuduct
-                id={item.id}
-                title={item.title}
-                image={item.image}
-                price={item.price}
-                rating={item.rating}
-              />
-            ))}
+            <div className="checkout__contents">
+              <FlipMove typeName="ul">
+                {basket?.map((item, i) => (
+                  <li key={Math.floor(Math.random() * 1000000)}>
+                    <CheckoutProuduct
+                      id={item.id}
+                      title={item.title}
+                      image={item.image}
+                      price={item.price}
+                      rating={item.rating}
+                    />
+                  </li>
+                ))}
+              </FlipMove>
+            </div>
           </div>
         )}
       </div>

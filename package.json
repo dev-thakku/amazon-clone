@@ -10,8 +10,10 @@
     "@testing-library/user-event": "^7.2.1",
     "firebase": "^7.19.1",
     "react": "^16.13.1",
+    "react-css-transition": "^0.7.4",
     "react-currency-format": "^1.0.0",
     "react-dom": "^16.13.1",
+    "react-flip-move": "^3.0.4",
     "react-scripts": "3.4.3"
   },
   "scripts": {

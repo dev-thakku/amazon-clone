@@ -30,3 +30,17 @@
   border-color: #a88734 #9c7e31 #846a29;
   color: #111;
 }
+
+@media only screen and (max-width: 768px) {
+  .subtotal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 91vw;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .subtotal p {
+    margin-top: 10px;
+  }
+}
