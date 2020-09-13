@@ -21,31 +21,31 @@ function Checkout() {
             </p>
           </div>
         ) : (
-          <div>
-            <h2 className="checkout__title">Your Shopping Basket</h2>
-            <div className="checkout__contents">
-              <FlipMove typeName="ul">
-                {basket?.map((item, i) => (
-                  <li key={Math.floor(Math.random() * 1000000)}>
-                    <CheckoutProuduct
-                      id={item.id}
-                      title={item.title}
-                      image={item.image}
-                      price={item.price}
-                      rating={item.rating}
-                    />
-                  </li>
-                ))}
-              </FlipMove>
+            <div>
+              <h2 className="checkout__title">Your Shopping Basket</h2>
+              <div className="checkout__contents">
+                <FlipMove typeName="ul">
+                  {basket?.map((item, i) => (
+                    <li key={Math.floor(Math.random() * 1000000)}>
+                      <CheckoutProuduct
+                        id={item.id}
+                        title={item.title}
+                        image={item.image}
+                        price={item.price}
+                        rating={item.rating}
+                      />
+                    </li>
+                  ))}
+                </FlipMove>
+              </div>
             </div>
-          </div>
-        )}
+          )}
       </div>
-      {basket?.length > 0 && (
-        <div className="checkout__right">
+      <div className="checkout__right">
+        {basket?.length != 0 &&
           <Subtotal />
-        </div>
-      )}
+        }
+      </div>
     </div>
   );
 }

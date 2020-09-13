@@ -20,7 +20,11 @@ const reducer = (state, action) => {
         ...state,
         basket: [...state.basket, action.item],
       };
-      break;
+    case "EMPTY_BASKET":
+      return {
+        ...state,
+        basket: [],
+      };
     case "REMOVE_FROM_BASKET":
       //REMOVING ITEM FROM BASKET
       let newBasket = [...state.basket];
@@ -40,7 +44,6 @@ const reducer = (state, action) => {
         ...state,
         basket: newBasket,
       };
-      break;
     default:
       return state;
   }
