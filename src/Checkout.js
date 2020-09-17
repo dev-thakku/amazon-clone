@@ -16,35 +16,33 @@ function Checkout() {
           <div>
             <h2 className="checkout__title">Your Shopping Basket is Empty</h2>
             <p>
-              You have no items in your basket. to buy one or more items, click
-              "Add to Basket" next to the item.
+              You have no items in your basket. to buy one or more items,
+              <br /> click "Add to Basket" next to the item.
             </p>
           </div>
         ) : (
-            <div>
-              <h2 className="checkout__title">Your Shopping Basket</h2>
-              <div className="checkout__contents">
-                <FlipMove typeName="ul">
-                  {basket?.map((item, i) => (
-                    <li key={Math.floor(Math.random() * 1000000)}>
-                      <CheckoutProuduct
-                        id={item.id}
-                        title={item.title}
-                        image={item.image}
-                        price={item.price}
-                        rating={item.rating}
-                      />
-                    </li>
-                  ))}
-                </FlipMove>
-              </div>
+          <div>
+            <h2 className="checkout__title">Your Shopping Basket</h2>
+            <div className="checkout__contents">
+              <FlipMove>
+                {basket?.map((item, i) => (
+                  <CheckoutProuduct
+                    key={item.price * item.id}
+                    id={item.id}
+                    title={item.title}
+                    image={item.image}
+                    price={item.price}
+                    rating={item.rating}
+                    index={basket.indexOf(item)}
+                  />
+                ))}
+              </FlipMove>
             </div>
-          )}
+          </div>
+        )}
       </div>
       <div className="checkout__right">
-        {basket?.length != 0 &&
-          <Subtotal />
-        }
+        <Subtotal />
       </div>
     </div>
   );

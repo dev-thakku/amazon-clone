@@ -51,3 +51,12 @@
 .footer__bottom > p > span {
   color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+  .footer__nav {
+    padding-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}

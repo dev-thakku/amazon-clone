@@ -1,6 +1,15 @@
-.orders{
-    padding: 20px 80px;
+.orders {
+  padding: 20px 80px;
 }
-.orders h1{
-    margin: 30px 0;
+.orders h1 {
+  margin: 30px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .orders {
+    padding: 20px 15px;
+  }
+  .orders > h1 {
+    margin-top: 0.2em;
+  }
 }

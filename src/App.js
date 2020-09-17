@@ -13,6 +13,7 @@ import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 import Footer from "./Footer";
 import Payment from "./Payment";
+import ProductDetail from "./ProductDetail";
 const promise = loadStripe(
   "pk_test_51HQCEqEkyZimy8Tz5iopOFCJEufjlDjnVuJ2OCcIOHVohRuz2pkdJJQ59U07wZtuCuZh3L8MsYoyv6Ck6Uk7VYtv007U8qEdCT"
 );
@@ -42,12 +43,16 @@ function App() {
       unSubscribe();
     };
   }, []);
-  console.log("USER IS >>>>>> ", user);
 
   return (
     <Router>
       <div className="App">
         <Switch>
+          <Route exact path="/products/:id">
+            <Header />
+            <ProductDetail />
+            <Footer hideLinks />
+          </Route>
           <Route path="/checkout">
             <Header />
             <Checkout />

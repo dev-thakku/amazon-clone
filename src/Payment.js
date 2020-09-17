@@ -36,8 +36,6 @@ function Payment() {
     getClientSecret();
   }, [basket]);
 
-  console.log("THE SECRET KEY IS >>>>>>", clientSecret);
-
   const handleSubmit = async (event) => {
     //doo some stuff
     event.preventDefault();

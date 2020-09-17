@@ -11,12 +11,15 @@ function Subtotal() {
 
   const signinRedirect = (e) => {
     if (user) {
-      history.push("/payment");
+      if (basket.length !== 0) {
+        history.push("/payment");
+      } else {
+        history.push("/");
+      }
     } else {
       history.push("/login");
     }
   };
-
 
   return (
     <div className="subtotal">
@@ -40,7 +43,7 @@ function Subtotal() {
       />
 
       <button onClick={signinRedirect}>
-        Proceed to Checkout
+        {basket.length === 0 ? "Add items to Cart" : "Proceed to Checkout"}
       </button>
     </div>
   );

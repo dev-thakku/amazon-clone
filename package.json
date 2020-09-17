@@ -14,10 +14,14 @@
     "firebase": "^7.19.1",
     "moment": "^2.27.0",
     "react": "^16.13.1",
+    "react-awesome-slider": "^4.1.0",
     "react-css-transition": "^0.7.4",
     "react-currency-format": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-flip-move": "^3.0.4",
+    "react-image-gallery": "^1.0.8",
+    "react-read-more-less": "^0.1.6",
+    "react-responsive-carousel": "^3.2.9",
     "react-scripts": "3.4.3"
   },
   "scripts": {

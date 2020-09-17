@@ -16,17 +16,17 @@ function Header() {
     }
   };
 
-  console.table(basket);
-
   return (
     <nav id="top" className="header">
-      <Link to="/">
-        <img className="header__logo" src={logo} alt="logo" />
-      </Link>
+      <div className="header__left">
+        <Link to="/">
+          <img className="header__logo" src={logo} alt="logo" />
+        </Link>
 
-      <div className="header__search">
-        <input type="text" className="header__searchInput" />
-        <SearchIcon className="header__searchIcon" />
+        <div className="header__search">
+          <input type="text" className="header__searchInput" />
+          <SearchIcon className="header__searchIcon" />
+        </div>
       </div>
 
       <div className="header__nav">
